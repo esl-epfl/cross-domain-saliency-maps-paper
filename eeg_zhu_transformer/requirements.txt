@@ -1,0 +1,5 @@
+git+https://github.com/esl-epfl/zhu_2023.git@main#egg=zhu&subdirectory=zhu
+matplotlib==3.10.3
+seaborn==0.13.2
+tqdm==4.67.1
+scikit-learn==1.6.1
