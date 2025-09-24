@@ -27,13 +27,16 @@ files in each subdirectory:
 The code was developed and tested on Python v3.10.16.
 
 ## Heart Rate Inference
-Experiments for heart rate inference from photoplethysmography signals can be found in the [ppg_kidppg](./ppg_kidppg/) folder.
+Experiments for heart rate inference from photoplethysmography signals can be found in the [ppg_kidppg](./ppg_kidppg/) folder. 
 
+We provide the input data and model weights required for the results in Section 5.1 and Appendix G. The results in Appendices H and F require the trained models from all 15 subjects along with the preprocessed data as described in KID-PPG. We followed the procedure described by [KID-PPG](https://github.com/esl-epfl/KID-PPG-Paper).
 
 ## Epilepsy detection 
 Experiments for epilepsy detection from electroencephalography (EEG) signals are located in [eeg_zhu_transformer](./eeg_zhu_transformer/).
 
-The ```zhu_transformer``` implementation along with the weights can be found [here](https://github.com/esl-epfl/zhu_2023).
+The ```zhu_transformer``` implementation along with the weights can be found [here](https://github.com/esl-epfl/zhu_2023). 
+
+We provide the data for the results in Section 5.2 and Appendices G and H. The results of Appendix F require the full [Physionet Siena Scalp EEG Database v1.0.0](https://physionet.org/content/siena-scalp-eeg/1.0.0/). The dataset should be preprocessed with [epilepsy2bids](https://github.com/esl-epfl/epilepsy2bids). 
 
 ## Foundation model forecasting
 The experiments for time-series forecasting using a foundation model are found in [timesfm](./timesfm/).

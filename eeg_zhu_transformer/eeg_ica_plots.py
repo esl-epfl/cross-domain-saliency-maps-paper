@@ -76,13 +76,13 @@ scale = 30.0
 fig, ax = plt.subplots(figsize = (24.0 * cm, 16.0 * cm))
 
 for i in range(n_channels):
-    ax.plot(time, scale * X[i, ...] - i * OFFSET, 
+    ax.plot(time, scale * X[i, ...] + i * OFFSET, 
                  color='black', linewidth = 0.25,
                  alpha = 0.85)
     ax.set_xlim([time[0], time[-1]])
     ax.spines[['top', 'right']].set_visible(False)
 
-ax.set_yticks(list(range(-18 * OFFSET, 1, OFFSET)), channels, fontsize = fontsize)    
+ax.set_yticks(list(range(1, 19 * OFFSET, OFFSET)), channels, fontsize = fontsize)    
 ax.set_xlabel('Time (s)', fontsize = fontsize)
 
 plt.tight_layout()
