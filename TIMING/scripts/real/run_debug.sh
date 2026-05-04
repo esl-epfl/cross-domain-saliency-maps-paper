@@ -1,0 +1,11 @@
+python real/main_cepstrum_cdig_v2_baseline.py \
+                    --model_type state \
+                    --explainers sepstrum_cdig \
+                    --train False\
+                    --data wafer \
+                    --fold 0 \
+                    --testbs 512 \
+                    --areas 0.1 \
+                    --top 0 \
+                    --output-file debug.csv \
+                    --device cuda:0
