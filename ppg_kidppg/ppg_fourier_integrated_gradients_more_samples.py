@@ -159,7 +159,7 @@ os.makedirs('./figures/ppg_attributions', exist_ok=True)
 
 # Plot first example with correct attributions
 for test_subject_id in range(1, 16):
-    cf = Config(search_type = 'NAS', root = '../../../ppg-dl-exploration/data/')
+    cf = Config(search_type = 'NAS', root = './data/')
 
     X, y, groups, activity = pp.preprocessing(cf.dataset, cf)
 
@@ -172,7 +172,7 @@ for test_subject_id in range(1, 16):
 
     # Create model and load pre-trained weights
     model = build_attention_model((256, 1))
-    model.load_weights('../../../KID-PPG/saved_models/adaptive_w_attention/model_weights/model_S' + str(int(test_subject_id)) + '.h5')
+    model.load_weights('./saved_models/adaptive_w_attention/model_weights/model_S' + str(int(test_subject_id)) + '.h5')
 
     x_explicant = np.zeros((1, 256, 1))
     y_pred_baseline = model.predict(x_explicant)
